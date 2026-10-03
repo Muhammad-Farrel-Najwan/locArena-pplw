@@ -1,0 +1,466 @@
+@import url(https://fonts.googleapis.com/css2?family=Asimovian&family=Outfit:wght@100..900&family=Parkinsans:wght@300..800&display=swap);
+
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /* height: 2000px; */
+    display: flex;
+    flex-direction: column;
+    scrollbar-width: none;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    position: fixed;
+    z-index: 100;
+    box-sizing: border-box;
+    height: 80px;
+    width: 100vw;
+    padding-inline: 40px;
+    padding-block: 12px;
+    border-bottom: 1px solid rgb(179, 179, 179);
+    background-color: #f9fafc;
+}
+
+.navbar1 {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar2 {
+    display: flex;
+}
+
+.navbar-text-logo{
+    text-decoration: none;
+}
+
+.logo-loc {
+    color: black;
+    text-decoration: none;
+    font-family: "Asimovian", sans-serif;
+    font-weight:bolder;
+    font-style: normal;
+    font-size: 24px;
+}
+
+.logo-arena {
+    color: green;
+    text-decoration: none;
+    font-family: "Asimovian", sans-serif;
+    font-weight:bolder;
+    font-style: normal;
+    font-size: 24px;
+}
+
+.navbar-button{
+    align-items: center;
+    gap: 40px;
+}
+
+.btn-masuk {
+    background-color: aliceblue;
+    padding-inline: 12px;
+    padding-block: 8px;
+    border: 1px solid;
+    border-radius: 4px;
+    border-color: black;
+}
+
+.btn-daftar {
+    background-color: rgb(7, 209, 17);
+    padding-inline: 12px;
+    padding-block: 8px;
+    border: 1px solid;
+    border-radius: 4px;
+    border-color: black;
+}
+
+#landing-hero {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    height: auto;
+    width: 100vw;
+    padding-inline: 40px;
+    padding-block: 12px;
+    justify-content: center;
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(255,255,255, 0.6) 60%,
+            rgba(255,255,255,1) 100%
+        ),
+        url('../assets/images/hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    gap: 24px;
+    padding-top: 200px;
+}
+
+.hero-text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.hero-text-judul {
+    text-align: center;
+}
+
+.hero-text-judul-1 {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    margin: 0;
+    -webkit-text-stroke: 0.5px;
+}
+
+.hero-text-judul-2 {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    margin: 0;
+    -webkit-text-stroke: 0.5px;
+    -webkit-text-stroke-color: linear-gradient(to right, #0BCF07 0%, #1F9A3D 100%);
+    background: #0BCF07;
+    background: linear-gradient(to right, #0BCF07 0%, #1F9A3D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-text-desc {
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    margin: 0;
+    border: 1px solid black;
+    border-radius: 24px;
+    backdrop-filter: blur(6px);
+    background: rgba(0, 0, 0, 0.05);
+    max-width: 700px;
+    padding-inline: 24px;
+}
+
+.landing-filter {
+    background-color: white;
+    height: auto;
+    width: 100%;
+    border-radius: 24px;
+    box-shadow: 10px;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.filter-container {
+    background-color: aliceblue;
+    border: 1px solid black;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    padding-inline: 24px;
+    padding-block: 12px;
+    box-sizing: border-box;
+    gap: 16px;
+}
+
+.filter-form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+    font-family: "Lato", sans-serif;
+    font-size: 12px;
+}
+
+.filter-select-container{
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.filter-form-select {
+    width: 100%;
+    position: relative;
+    padding-inline: 12px 36px;
+    padding-block: 8px;
+    font-size: 16px;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.filter-select-container .material-symbols-outlined {
+    position: absolute;
+    right: 12px;
+    pointer-events: none;
+}
+
+.filter-search {
+    background-color: rgb(7, 209, 17);
+    border: 1px solid black;
+    border-radius: 12px;
+    padding-inline: 24px;
+    padding-block: 16px;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight:bolder;
+}
+
+
+#landing-result {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: auto;
+    width: 100vw;
+    padding-inline: 40px;
+    padding-block: 40px;
+    justify-content: center;
+}
+
+.landing-result-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.landing-result-title {
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.landing-result-title h1 {
+    font-size:24px;
+    font-weight: 700;
+}
+
+.landing-result-title h2 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.landing-result-container h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    height: fit-content;
+    width: 400px;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(250, 250, 254);
+    border-radius: 24px;
+    overflow: hidden;
+    font-family: "Lato", sans-serif;
+    border: 1px solid black;
+}
+
+.card-top {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-image: url(../assets/images/card1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: right;
+}
+
+.card-top img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-top-header {
+    position: relative;
+
+    height: 25px;
+    padding-block: 4px;
+    display: flex;
+    top: 20px;
+    right: 24px;
+    justify-content: center;
+    font-size: 12px;
+    align-items: center;
+    color: rgb(252, 250, 250);
+    padding-inline: 12px;
+    border-radius: 20px;
+    background-color: rgb(0, 104, 5);
+    gap: 5px;
+}
+
+.card-top-header .material-symbols-outlined {
+    font-size: 20px;
+}
+
+.card-bottom {
+    padding-inline: 24px;
+    padding-block: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card-bottom-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-bottom-header p {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin: 0;
+    line-height: normal;
+    font-size: 16px;
+}
+
+.card-rating {
+    background-color: rgb(149, 255, 154);
+    padding-inline: 12px;
+    padding-block: 4px;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.card-rating p {
+    gap: 4px;
+}
+
+.card-bottom .nama-lapangan {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.card-fasilities {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    padding-block: 8px 16px;
+    border-bottom: 1px solid black;
+}
+
+.card-fasilities span {
+    padding: 4px;
+    background-color: rgb(7, 209, 17);
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.card-price-container {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 8px;
+}
+
+.card-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    height: 100%;
+}
+
+.card-price h4, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.card-price h4 {
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.card-price h3 {
+    font-weight: 800;
+}
+
+.card-price span {
+    font-weight: 500;
+}
+
+.card-lihat-jadwal {
+    display: flex;
+    align-items: center;
+    height: auto;
+    padding-inline: 12px;
+    gap: 8px;
+    border: 1px solid black;
+    border-radius: 8px;
+    font-weight: 600;
+    background-color: rgb(7, 209, 17);
+}
+
+.footer {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    margin-right: 20px;
+    justify-content: space-between;
+    padding-inline: 40px;
+    padding-block: 20px;
+    font-family: "Lato", sans-serif;
+    position: relative;
+    background-color: #f9fafc;
+}
+
+#footer-section-1 {
+    width: 40%;
+
+}
+
+#footer-section-2 {
+    width: fit-content;
+    row-gap: 20px;
+    bottom: 13px;
+}
+
+#footer-section-3 {
+    width: fit-content;
+    row-gap: 20px;
+    bottom: 13px;
+}
