@@ -11,7 +11,7 @@ class lapanganController extends Controller
 
         $lapangan = Lapangan::getLapangan();
 
-        return view('helloworld', [
+        return view('landing', [
             'lapangan' => $lapangan
         ]);
     }

@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{{asset('css/style.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <title>Landing-page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Asimovian&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
@@ -36,7 +39,8 @@
                 <h1 class="hero-text-judul-2">Lebih Cepat & Praktis</h1>
             </div>
             <div class="hero-text-desc">
-                <p>Akses instan ribuan arena berstandar federasi dengan jadwal terintegrasi langsung, pembayaran digital terproteksi, dan tiket QR check-in otomatis.</p>
+                <p>Akses instan ribuan arena berstandar federasi dengan jadwal terintegrasi langsung, pembayaran digital
+                    terproteksi, dan tiket QR check-in otomatis.</p>
             </div>
         </div>
 
@@ -83,7 +87,7 @@
                             <option value="jatim-surabaya-mulyorejo">Mulyorejo</option>
                         </select>
                         <span class="material-symbols-outlined">arrow_drop_down</span>
-                        </div>
+                    </div>
                 </div>
             </div>
             <!-- Filter olahraga -->
@@ -131,18 +135,19 @@
                 <h2>Menampilkan arena terbaik sesuai kriteria yang kamu cari</h2>
             </div>
             <div class="result-card-container">
+                @foreach ($lapangan as $l)
                 <div class="card">
                     <div class="card-top">
                         <div class="card-top-header">
                             <span class="material-symbols-outlined">sports_soccer</span>
-                            <h3>Mini soccer</h3>
+                            <h3>{{$l->jenis_lapangan}}</h3>
                         </div>
                     </div>
                     <div class="card-bottom">
                         <div class="card-bottom-header">
                             <p>
                                 <span class="material-symbols-outlined">location_on</span>
-                                Gubeng, Surabaya Pusat
+                                {{$l->kecamatan}}, {{$l->kota}}
                             </p>
                             <div class="card-rating">
                                 <p>
@@ -151,7 +156,7 @@
                                 </p>
                             </div>
                         </div>
-                        <p class="nama-lapangan">Lapangan Pak Firdaus</p>
+                        <p class="nama-lapangan">{{$l->nama_lapangan}}</p>
                         <div class="card-fasilities">
                             <span class="material-symbols-outlined">location_on</span>
                             <span class="material-symbols-outlined">location_on</span>
@@ -163,7 +168,7 @@
                                     HARGA SEWA
                                 </h4>
                                 <h3>
-                                    Rp170.000
+                                    Rp{{number_format($l->harga, 0, ',', '.')}}
                                     <span>
                                         / jam
                                     </span>
@@ -176,6 +181,7 @@
                         </div>
                     </div>
                 </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -187,12 +193,12 @@
             </div>
             <div>
                 <p>
-                Platform digital sewa lapangan dan arena olahraga modern di indonesia.
-                Temukan, pesan waktu main dan langsung bayar secara online di satu tempat
+                    Platform digital sewa lapangan dan arena olahraga modern di indonesia.
+                    Temukan, pesan waktu main dan langsung bayar secara online di satu tempat
                 </p>
                 <br>
                 <p>
-                © locArena Indonesia. Hak Cipta Dilindungi Undang-Undang
+                    © locArena Indonesia. Hak Cipta Dilindungi Undang-Undang
                 </p>
             </div>
         </div>
