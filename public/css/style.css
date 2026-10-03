@@ -283,6 +283,7 @@ body::-webkit-scrollbar{
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+    row-gap: 20px;
     /* gap: 50px; */
 }
 
