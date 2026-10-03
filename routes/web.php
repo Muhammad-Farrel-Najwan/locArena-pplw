@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\landingPage;
 
-Route::get('/', function () {
-    return view('landing');
-});
+Route::get('/', [landingPage::class, 'index']) ->name('landing');
