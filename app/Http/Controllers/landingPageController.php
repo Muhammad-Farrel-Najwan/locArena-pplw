@@ -3,11 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\lapangan;
-use Illuminate\Http\Request;
 
-class lapanganController extends Controller
+class landingPageController extends Controller
 {
-    public function getLapangan() {
+    public function index() {
 
         $lapangan = Lapangan::getLapangan();
 

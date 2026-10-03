@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\lapanganController;
+use App\Http\Controllers\landingPageController;
 
 
-Route::get('/',[lapanganController::class, 'getLapangan'])->name('landing');
+Route::get('/',[landingPageController::class, 'index'])->name('landing');
